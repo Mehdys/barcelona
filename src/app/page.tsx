@@ -19,9 +19,9 @@ export default function LandingPage() {
           <span className="text-zinc-500">We tell you which 12 to call.</span>
         </h1>
         <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl">
-          Barcelona is the explainability layer on top of Clay. It turns your enrichment data
-          into a transparent, auditable ranking — so every decision has a reason you can read,
-          challenge, and defend. O*NET-backed weights, causal adjustments, SHAP per candidate.
+          You enriched 200 candidates in Clay. Now you're staring at a spreadsheet with no idea who to call.
+          Barcelona takes that CSV, ranks every candidate, and tells you exactly why each one is or isn't worth your time —
+          which signals drove the score, what's missing, and what would move them up.
         </p>
         <div className="flex items-center gap-3 pt-2">
           <button
