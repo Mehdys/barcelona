@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Barcelona — Candidate Scoring Engine',
-  description: 'Deterministic candidate scoring with causal AI and SHAP explainability',
+  title: 'Barcelona — Explainable AI Layer for Clay',
+  description: 'The explainability layer on top of Clay. Every candidate decision with a full audit trail — SHAP breakdowns, causal adjustments, no black boxes.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

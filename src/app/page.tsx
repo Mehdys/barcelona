@@ -12,16 +12,16 @@ export default function LandingPage() {
       <div className="max-w-3xl space-y-6">
         <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-400 bg-indigo-950/40 border border-indigo-800/40 rounded-full px-3 py-1">
           <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full" />
-          Deterministic · No hallucinations · Full audit trail
+          Explainable · Auditable · No black boxes
         </div>
         <h1 className="text-5xl font-black text-white leading-tight tracking-tight">
           Clay gives you 200 people.<br />
           <span className="text-zinc-500">We tell you which 12 to call.</span>
         </h1>
         <p className="text-zinc-400 text-lg leading-relaxed max-w-2xl">
-          Barcelona is a candidate scoring engine that sits on top of your Clay enrichment.
-          It replaces gut-feel shortlisting with a transparent, auditable algorithm —
-          O*NET-backed weights, causal adjustments, and SHAP explainability per candidate.
+          Barcelona is the explainability layer on top of Clay. It turns your enrichment data
+          into a transparent, auditable ranking — so every decision has a reason you can read,
+          challenge, and defend. O*NET-backed weights, causal adjustments, SHAP per candidate.
         </p>
         <div className="flex items-center gap-3 pt-2">
           <button
@@ -140,9 +140,9 @@ export default function LandingPage() {
       <div className="grid grid-cols-3 gap-5">
         {[
           {
-            tag: 'Transparent',
-            title: 'Math, not prompts',
-            desc: 'Claude narrates. It never scores. Every rank is produced by a deterministic formula with a full audit log — reproducible, explainable, defensible.',
+            tag: 'Explainable',
+            title: 'Every decision has a reason',
+            desc: 'Claude narrates. It never scores. Every rank is produced by a deterministic formula — SHAP values show exactly which signals drove it and by how much. Reproducible, auditable, defensible.',
           },
           {
             tag: 'Role-aware',
@@ -151,8 +151,8 @@ export default function LandingPage() {
           },
           {
             tag: 'Clay-native',
-            title: 'One prompt, one credit',
-            desc: 'The setup page generates a single Clay Sculptor prompt. One AI column returns all 6 signals as JSON. Formula columns extract them. No manual setup per signal.',
+            title: 'Plugs into your Clay table',
+            desc: 'The setup page generates a single Sculptor prompt. One AI column returns all 6 signals as JSON. Formula columns extract them. Your enrichment, made legible.',
           },
         ].map(d => (
           <div key={d.title} className="bg-zinc-900 border border-zinc-800 rounded-xl p-5 space-y-3">

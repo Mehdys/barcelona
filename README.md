@@ -1,8 +1,8 @@
-# Barcelona — Candidate Scoring Engine
+# Barcelona — Explainable AI Layer for Clay
 
 > Clay gives you 200 people. We tell you which 12 to call.
 
-Barcelona is a deterministic candidate scoring engine built on top of Clay enrichment. It replaces gut-feel shortlisting with a transparent, auditable algorithm — O\*NET-backed weights, causal bias corrections, and SHAP explainability per candidate.
+Barcelona is the explainability layer on top of Clay enrichment. It turns your enriched pipeline into a transparent, auditable ranking — every decision backed by a reason you can read, challenge, and defend. O\*NET-backed weights, causal bias corrections, and SHAP explainability per candidate.
 
 ---
 
