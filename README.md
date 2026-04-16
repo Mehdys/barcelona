@@ -162,6 +162,17 @@ Barcelona generates a ready-to-paste **Sculptor AI prompt** after JD analysis. I
 
 ---
 
+## Technical Highlights
+
+- **Exact SHAP, not approximated** — linear model means SHAP values are analytically exact (`normalize(signal) × weight × 100`), no sampling or TreeSHAP needed
+- **O\*NET-anchored weights** — signal weights derived from Bureau of Labor Statistics importance scores for occupation 15-1252.00, not hand-tuned guesses
+- **Causal bias correction before normalization** — confounders (FAANG private repos, seed-stage tenure norms) are adjusted via a causal DAG *before* the math runs, not filtered after
+- **Counterfactual via do-calculus** — `do(signal=max)` computes the interventional score in the Pearl sense: what the candidate *would* score if a single cause changed
+- **Native ATS APIs** — Ashby, Greenhouse, and Lever fetched via their public posting APIs (structured JSON), with Jina reader fallback for all other URLs
+- **Pool-relative normalization** — min-max is computed across your specific upload, so scores reflect rank within your actual candidate pool, not a global benchmark
+
+---
+
 ## License
 
 MIT
