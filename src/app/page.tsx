@@ -44,14 +44,14 @@ export default function LandingPage() {
         <div className="space-y-4">
           <div className="text-xs font-semibold text-zinc-600 uppercase tracking-widest">The problem</div>
           <h2 className="text-2xl font-bold text-white leading-snug">
-            Sorting by years of experience is keyword filtering dressed up as recruiting.
+            Clay enriches your pipeline. But it doesn't explain its decisions.
           </h2>
           <p className="text-zinc-500 text-sm leading-relaxed">
-            It buries the engineer with 300 GitHub commits and a shipped vLLM plugin. It surfaces the enterprise hire who'll struggle in a 12-person team. The signal is there — you just don't have a system to read it.
+            You get a score — or a sort — but no reason. Why is Alice ranked above Sara? Which signal drove it? What would change it? Without answers, you're still relying on gut feel. The data is there. The explanation isn't.
           </p>
         </div>
         <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 space-y-2">
-          <div className="text-xs text-zinc-600 uppercase tracking-wider font-semibold pb-2">Keyword sort — who rises to the top</div>
+          <div className="text-xs text-zinc-600 uppercase tracking-wider font-semibold pb-2">Clay sort — no explanation given</div>
           {[
             { name: 'Alice M.', note: '12 yrs · Google · Lists: PyTorch, Kubernetes',          rank: 1,  gem: false },
             { name: 'Bob K.',   note: '8 yrs · Meta · Lists: ML, Python, Spark',               rank: 2,  gem: false },
@@ -67,7 +67,7 @@ export default function LandingPage() {
               {c.gem && <div className="text-xs text-emerald-500 font-mono shrink-0">buried</div>}
             </div>
           ))}
-          <div className="text-xs text-zinc-700 pt-2 border-t border-zinc-800">Sara would have been your best hire.</div>
+          <div className="text-xs text-zinc-700 pt-2 border-t border-zinc-800">Why is Sara at #9? Clay doesn't say. Barcelona does.</div>
         </div>
       </div>
 
@@ -76,9 +76,9 @@ export default function LandingPage() {
         <div className="text-xs font-semibold text-zinc-600 uppercase tracking-widest">How it works</div>
         <div className="grid grid-cols-3 gap-6">
           {[
-            { n: '01', title: 'Paste a JD URL', desc: 'The agent reads your role and derives scoring weights specific to it. Not generic — tuned to your exact hire.' },
-            { n: '02', title: 'Enrich in Clay', desc: 'One Sculptor prompt, one credit per candidate. Export the CSV — no manual column setup.' },
-            { n: '03', title: 'Get a ranked shortlist', desc: 'Every candidate scored, explained, and ready to reach out to. With a personalized email written from their actual background.' },
+            { n: '01', title: 'Paste a JD URL', desc: 'Barcelona reads your role, matches it to labor market data, and builds a scoring model specific to that hire — not a generic template.' },
+            { n: '02', title: 'Enrich in Clay', desc: 'One Sculptor prompt, one credit per candidate. Export the CSV — your existing Clay table, no changes needed.' },
+            { n: '03', title: 'Every rank explained', desc: 'Each candidate gets a score, a SHAP breakdown, a counterfactual, and a written reason. You know why — and what would change it.' },
           ].map(s => (
             <div key={s.n} className="space-y-3">
               <div className="text-4xl font-black text-zinc-800 font-mono">{s.n}</div>
@@ -91,37 +91,37 @@ export default function LandingPage() {
 
       {/* What you get */}
       <div className="space-y-6">
-        <div className="text-xs font-semibold text-zinc-600 uppercase tracking-widest">What you get per candidate</div>
+        <div className="text-xs font-semibold text-zinc-600 uppercase tracking-widest">What the explainability layer adds</div>
         <div className="grid grid-cols-2 gap-4">
           {[
             {
-              label: 'Ranked score (0–100)',
-              desc: 'Deterministic. Same input always gives the same output. Run it twice, get the same ranking.',
+              label: 'Auditable score (0–100)',
+              desc: 'Deterministic formula. Same input, same output, every time. No black box — every number has a traceable source.',
               color: 'text-white',
             },
             {
-              label: 'SHAP breakdown',
-              desc: 'See exactly which signals drove the score — and by how much. GitHub velocity, stage fit, skill evidence, tenure stability.',
+              label: 'SHAP signal breakdown',
+              desc: 'Which signals drove the rank — and by how much. You can see exactly why Alice is above Sara before you pick up the phone.',
               color: 'text-indigo-400',
             },
             {
               label: 'Hidden gem flag',
-              desc: 'Candidates with strong signals but thin data get flagged. These are the people keyword filtering buries every time.',
+              desc: 'Strong signals, thin data. Candidates keyword filters bury — surfaced with an explanation of why they deserve a second look.',
               color: 'text-purple-400',
             },
             {
               label: 'Counterfactual',
-              desc: '"If this candidate fixed their weakest signal, they\'d jump from 61 to 79." Shows exactly what coaching or context would change.',
+              desc: '"Fix this one signal and they jump from 61 to 79." Shows what would actually move the needle — for coaching or context.',
               color: 'text-yellow-400',
             },
             {
-              label: 'Agent reasoning',
-              desc: 'An AI agent reviews the full ranked pool and flags anomalies, red flags, and patterns the algorithm can\'t explain — visible in real time.',
+              label: 'Written reasoning memo',
+              desc: 'A full pool review — anomalies, patterns, red flags the formula can\'t catch. Readable, not a dashboard.',
               color: 'text-emerald-400',
             },
             {
               label: 'Personalized outreach',
-              desc: 'A cold email written from their LinkedIn headline, summary, and GitHub activity. Not a template — references what they actually built.',
+              desc: 'Cold email written from their actual headline, summary, and GitHub activity. References what they built — not a mail merge.',
               color: 'text-orange-400',
             },
           ].map(item => (
@@ -168,17 +168,17 @@ export default function LandingPage() {
       {/* CTA */}
       <div className="border border-zinc-800 rounded-2xl p-10 text-center space-y-5 bg-zinc-900/40">
         <div className="space-y-2">
-          <div className="text-2xl font-bold text-white">Ready to find the Sara in your pipeline?</div>
+          <div className="text-2xl font-bold text-white">Make your Clay pipeline legible.</div>
           <div className="text-zinc-500 text-sm max-w-lg mx-auto">
             Paste a job URL, get your Clay setup, upload your enriched CSV.
-            First ranked shortlist in under 5 minutes.
+            Every candidate ranked, explained, and ready to act on — in under 5 minutes.
           </div>
         </div>
         <button
           onClick={() => router.push('/analyze')}
           className="bg-white text-zinc-950 font-bold px-8 py-3.5 rounded-xl hover:bg-zinc-100 transition-colors text-sm"
         >
-          Score my pipeline →
+          Add the explainability layer →
         </button>
       </div>
 
